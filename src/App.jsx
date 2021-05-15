@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useContext } from 'react'
+import React, { useState,useEffect } from 'react'
  import Movie from './components/movie/Movie'
 import './App.css'
 import Searchbar from './components/Searchbar';
@@ -7,7 +7,7 @@ import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import IconButton from '@material-ui/core/IconButton';
 
-export const bkListContext = React.createContext();
+
 function App() {
   
   const FEATURED_API = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=f56668e9c8ca57a5df685488c65eaca5&page=1";
@@ -45,26 +45,20 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <nav className="navigation">
-        
-        <ul className="list-non-bullet nav-pills">
-            <li className="nav-brand" onClick={()=>{window.history.back()}} >
-                <a href='/' >Rmovies</a>
-            </li>
-            
-            <li className="list-item-inline">
+      <nav className="navigation d-inline">
+              <a href='/' onClick={()=>{window.history.back()}}  >Rmovies</a>
+
               <Link to='/bookmarks'> 
                 <IconButton onClick={()=>setShowBookmarks(!showBookmarks)}>
                   <BookmarkIcon style={{color:'white'}} />
                 </IconButton>
               </Link>  
-            </li>
-            <li>
-            <Searchbar setMovies={setMovies} />
-            </li>
-        </ul>
+
+            <span><Searchbar setMovies={setMovies} /></span>
+         
         
     </nav>
+     
      
     {showBookmarks ?
       <div className='bookmark-container'>

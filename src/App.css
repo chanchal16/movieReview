@@ -7,36 +7,32 @@
   background-color: var(--dark);
   display: flex; 
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /******navbar*********/
 .navigation{
-  background-color: #C4B5FD;
+  background-color: var(--dark);
   font-family: 'Oleo Script', cursive;
-  /* color: #dafaf3; */
-  /* padding: 1rem; */
-  /* border-bottom-left-radius: 1rem; */
+  display: inline;
+  padding: 1rem; 
+  margin-bottom: 35px;
 }
-.nav-brand{
+
+
+.navigation a{
+  text-decoration: none;
+  color: white;
   float: left; 
   font-weight: bold;
   font-size: 1.8rem;
+  padding: 0 10px;
 }
-.nav-brand a{
-  text-decoration: none;
-  color: white;
-}
-.navigation .nav-pills{
-  text-align: left;
+.navigation span{
+  text-align: right;
   font-size: 1.2rem;
 }
-.list-non-bullet {
-  list-style: none;
-}
-.list-item-inline{
-  display: inline;
-  padding: 0px 10px;
-}
+
 
 
 /**movie nd bookmarks**/
@@ -45,11 +41,12 @@
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  justify-content: space-evenly ;  
+  justify-content: space-evenly ; 
+  margin-bottom: 30px; 
   /* align-items: stretch; */
 }
 .movie-container > *{
-  /* flex-grow: 1; */
+  flex-grow: 1; 
   flex-basis: 0;
 }
 
@@ -69,7 +66,7 @@
   border-radius: 15px;
   outline: none;
   font-size: 15px;
-  margin-left: 80%;
+  /* margin-left: 80%; */
 
 }
 

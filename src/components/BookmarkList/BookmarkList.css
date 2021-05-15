@@ -3,13 +3,14 @@
     flex-wrap: wrap;
     flex-direction: row !important;
     width: 100%;
-    justify-content: space-evenly ; 
+    justify-content: space-evenly ;
+    
 }
 .card-wrap-inner{
     display: flex;
     flex-direction: row;
     width: 33.33%;
-    padding:30px;
+    
 }
 
 .bkmovie-card{
