@@ -1,0 +1,58 @@
+.bookmark-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-evenly ; 
+}
+.card-wrap-inner{
+    display: flex;
+    flex-direction: row;
+    width: 33.33%;
+    padding:30px;
+}
+
+.bkmovie-card{
+    width: 250px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   
+}
+.bkmovie-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+}
+
+.bkmovie-card img{
+    max-width: 100%;
+    /* object-fit: cover; */
+    height: 300px; 
+    flex-grow: 1;
+}
+.bkmovie-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 16px;
+    background-color: #C4B5FD;
+    margin: 0;
+    align-items: center;
+    
+}
+.bkmovie-info h4{
+    margin: 0;
+}
+.bkmovie-info p{
+    color: goldenrod;
+    font-weight: bold;
+    background-color: #4C1D95;
+    padding: 2px;
+    border: 1px transparent;
+    border-radius: 5px;
+}
+
+
