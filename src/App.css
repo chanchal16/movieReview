@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
 :root{
   --dark:#171717;
 }
@@ -13,11 +15,12 @@
 /******navbar*********/
 .navigation{
   background-color: var(--dark);
-  font-family: 'Oleo Script', cursive;
+  font-family: 'oto Serif', serif;
   display: inline;
   padding: 1rem; 
   margin-bottom: 35px;
 }
+
 
 
 .navigation a{

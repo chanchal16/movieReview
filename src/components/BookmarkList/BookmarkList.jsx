@@ -1,5 +1,8 @@
 import React from 'react'
 import './BookmarkList.css'
+
+
+
 export default function BookmarkList({title,poster_path,vote_average}) {
 
     const IMAGE_API ="https://image.tmdb.org/t/p/w1280";
@@ -15,11 +18,11 @@ export default function BookmarkList({title,poster_path,vote_average}) {
                         
                 <div className="bkmovie-info">
                     <h4>{title}</h4>
-                    <p style={{color:'goldenrod'}}>{vote_average}</p>
-                            
+                    <p style={{color:'goldenrod'}}>{vote_average}</p>            
                 </div>
                 
             </div>
+            
         </div>
         
     )
