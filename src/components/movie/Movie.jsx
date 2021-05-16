@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Bookmark from '../Bookmark';
 import './Movie.css'
 export default function movie({id,title,overview,poster_path,vote_average,bookmarkList}) {
