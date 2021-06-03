@@ -3,12 +3,17 @@ import './BookmarkList.css'
 
 
 
-export default function BookmarkList({title,poster_path,vote_average}) {
 
+export default function BookmarkList({title,poster_path,vote_average}) {
+    
     const IMAGE_API ="https://image.tmdb.org/t/p/w1280";
 
     
+
+    
     return (
+        <>
+        
 
         <div className='card-wrap-inner ext-sp'>
             <div className="bkmovie-card">
@@ -24,6 +29,6 @@ export default function BookmarkList({title,poster_path,vote_average}) {
             </div>
             
         </div>
-        
+       </> 
     )
 }

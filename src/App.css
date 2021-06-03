@@ -44,13 +44,14 @@
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  justify-content: space-evenly ; 
+  justify-content: space-evenly !important;  
   margin-bottom: 30px; 
+  
   /* align-items: stretch; */
 }
 .movie-container > *{
   flex-grow: 1; 
-  flex-basis: 0;
+  flex-basis: 0;  
 }
 
 
@@ -78,4 +79,21 @@
   font-size: 20px;
   border: 1px solid white;
   border-radius: 50%;
+}
+
+.bckbtn{
+  padding: 10px;
+  background-color: #C4B5FD;
+  border: 1px transparent;
+  border-radius: 5px;
+  margin-right: 90% !important;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+/**moviedetails***/
+.movie-details{
+  /* padding: 30px; */
+  margin-bottom: 5%;
 }
