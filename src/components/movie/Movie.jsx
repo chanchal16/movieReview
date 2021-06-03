@@ -4,7 +4,7 @@ import './Movie.css'
 import {Link} from 'react-router-dom'
 
 
-export default function movie({id,title,overview,poster_path,vote_average,bookmarkList,setSelectedMovie}) {
+export default function movie({id,title,poster_path,vote_average,bookmarkList}) {
     
     const IMAGE_API ="https://image.tmdb.org/t/p/w1280";
     return (
