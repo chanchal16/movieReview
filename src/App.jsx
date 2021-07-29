@@ -65,7 +65,7 @@ function App() {
     </nav>
      
     <Switch>
-    {/* {showBookmarks ? */}
+    
       <Route exact path='/'>
         <div className='movie-container'>
           {movies.length > 0 && movies.map(movie=>(
@@ -87,9 +87,7 @@ function App() {
         </div>
       </div> 
       </Route>
-      {/* :   */}
-      
-      
+
       <Route path={'/details/:id'}>
         <div className='movie-details'> 
           <MovieDetails />

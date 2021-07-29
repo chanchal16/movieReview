@@ -30,6 +30,10 @@ p span{
   font-weight: bold;
 }
 
+.carouselDiv{
+    margin-bottom: 20px;
+}
+
 .ubtn{
     margin: 25px;
     width: 100%;

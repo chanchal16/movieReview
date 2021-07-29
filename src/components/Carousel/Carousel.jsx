@@ -1,10 +1,19 @@
 import React,{ useEffect, useState } from 'react'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
+
 import './Carousel.css'
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import SwiperCore, {Pagination,Navigation,Autoplay} from 'swiper/core';
+
 import { useParams } from 'react-router-dom';
 
-const handleDragStart = (e) => e.preventDefault();
+SwiperCore.use([Pagination,Navigation,Autoplay]);
+
+
 
 export default function Carousel() {
     const {id} = useParams();
@@ -18,24 +27,13 @@ export default function Carousel() {
             <img 
                 src={item.profile_path ? `${img_200}/${item.profile_path}` : noPicture} 
                 alt={item?.name}
-                onDragStart={handleDragStart}
                 className="carouselItem__img"
             />
             <b className="carouselItem__txt">{item?.name}</b>
         </div>
     ));
 
-    const responsive = {
-        0: {
-          items: 3,
-        },
-        512: {
-          items: 5,
-        },
-        1024: {
-          items: 7,
-        },
-      };
+   
 
     const fetchCast = async() =>{
          await fetch(url)
@@ -52,14 +50,15 @@ export default function Carousel() {
 
     return (
         <div>
-            <AliceCarousel 
-            mouseTracking
-            infinite
-            disableDotsControls
-            disableButtonsControls 
-            responsive={responsive}
-            items={items} 
-            autoPlay/>
+          
+            <Swiper spaceBetween={30} slidesPerView={4} navigation={true} loop={true} 
+                autoplay={{"delay": 1000,"disableOnInteraction": false}}  className="mySwiper">
+                {items.map((slideContent) => ( 
+                    <SwiperSlide key={slideContent} >
+                    {slideContent}
+                    </SwiperSlide>
+                ))} 
+            </Swiper>
         </div>
     )
 }
